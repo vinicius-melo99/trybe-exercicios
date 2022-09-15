@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    
+}
+
+h1{
+    font-family: sans-serif;    
+    font-size: 65px;
+    color: orange;
+    margin-bottom: 20px;
+    
+}
+
+p{
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modificaCor{
+    background-color: gray;
+}
+
+li{
+    line-height: 35px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center;
+    list-style-type: none;
+}
+
+#amarelo{background-color: yellow;}
+#vermelho{background-color: red;}
+#marrom{background-color: #874c2a;}
