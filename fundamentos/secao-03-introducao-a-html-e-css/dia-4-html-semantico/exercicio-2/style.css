@@ -9,7 +9,7 @@
 
 header .background{
     padding: 15px 2%;
-    min-height: 70vh;
+    min-height: 95vh;
     background-image: url(../images/capa.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ header .background{
 
 .title > h1{
     color: white;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 50px;
     
 }
@@ -29,8 +29,8 @@ header .background{
 .title{
     display: inline-block;
     position: absolute;
-    top: 30%;
-    width: 40%;
+    top: 35%;
+    width: 45%;
 }
 
 .menu{
@@ -47,8 +47,79 @@ header .background{
     transition: 0.2s;
 }
 
+.arrow{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/down-arrow.png);
+    position: absolute;
+    bottom: calc(-64px / 2);
+    background-size: cover;
+    left: calc(50% - (64px / 2));
+}
+
 .menu a:hover{
     transform: scale(1.05);
     color: #ccc;
 }
 
+.article-title{
+    text-align: center;
+    padding: 60px 2% 20px 2%;
+    /* background-color: #ccc; */
+    font-size: 26px;
+}
+
+hr{
+    margin-top: 30px;
+}
+
+article.fatos-animal{
+    padding: 40px 2%;
+    
+}
+
+p{
+    line-height: 25px;
+    margin-top: 15px;
+}
+
+.conteudo-geral{
+    display: inline-block;
+    padding: 0 80px;
+    width: 75%;
+    margin-left: -4px;
+    vertical-align: top;
+    
+    
+}
+
+.fatos-animal .info-animal{
+    display: inline-block ;
+    width: 25%;
+    margin-left: -4px;
+    text-align: center;
+    padding: 10px 2%;
+    border-left: 2px solid #ccc;
+}
+    
+ .info-animal img{
+    border-radius: 5%;
+ }
+
+ .info-animal table{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+
+ .info-animal table td{
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 11px;
+ }
+
+ .info-animal table td:nth-of-type(2){
+    text-align: left;
+ }
