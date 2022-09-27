@@ -50,7 +50,7 @@ console.log(''); */
 
 // Usando o objeto abaixo, faça os exercícios a seguir:
 
-let leitor = {
+   let leitor = {
     nome: 'Julia',
     sobrenome: 'Pessoa',
     idade: 21,
@@ -61,8 +61,108 @@ let leitor = {
         editora: 'Tordesilhas',
       },
     ],
-  };
+  }; 
 
 //1 - Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
 
-console.log(`O livro favorito de ${leitor.nome} é '${leitor.livrosFavoritos[0].titulo}'`);
+/* console.log(`O livro favorito de ${leitor.nome} é '${leitor.livrosFavoritos[0].titulo}'`); */
+
+// 2 - Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a essa chave um objeto contendo as seguintes informações:
+// {
+//   titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//   autor: 'JK Rowling',
+//   editora: 'Rocco',
+// }
+
+// 3 - Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a essa chave um objeto contendo as seguintes informações:
+/* 
+leitor.livrosFavoritos[1] = 
+  {
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JK Rowling',
+    editora: 'Rocco'
+  }
+;
+
+console.log(leitor); */
+
+//4 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
+
+/* let count = 0;
+
+for(let index in leitor.livrosFavoritos){
+  count++;
+}
+
+console.log(`Júlia tem ${count} livros favoritos.`); */
+
+// Exercícios Funções ------------------------------------------------------
+
+//1 - Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+
+/* function verificaPalindromo(palavra){
+  let palindromo;
+
+  if(palavra === palavra.split('').reverse().join('')){
+    palindromo = true;
+  } else{
+    palindromo = false;
+  }
+
+  return palindromo;
+}
+
+console.log(verificaPalindromo('trybe')); */
+
+//2 - crie uma função que receba um array de inteiros e retorne o índice do maior valor. 
+
+/* function indiceMaiorValor(array){
+  let armazenaIndice = 0;
+  let maiorValor = 0;
+
+  for(index in array){
+    if(array[index] > maiorValor){
+      maiorValor = array[index];
+      armazenaIndice = index;
+    }
+  }
+
+  return armazenaIndice;
+}
+
+console.log(indiceMaiorValor([2, 3, 60, 7, 10, 1])); */
+
+//3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor. 
+
+/* function indiceMenorValor(array){
+  let armazenaIndice = 0;
+  let menorValor = array[0];
+
+  for(index in array){
+    if(array[index] < menorValor){
+      menorValor = array[index];
+      armazenaIndice = index;
+    }
+  }
+
+  return armazenaIndice;
+}
+
+console.log(indiceMenorValor([2, 4, 6, 7, -10, 0, -33])); */
+
+//4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+/* function maiorPalavra(palavras){
+  let maiorPalavra = '';
+  
+  for(let palavra of palavras){
+    if(palavra.length > maiorPalavra.length){
+      maiorPalavra = palavra;
+    }
+  }  
+    
+  return maiorPalavra;
+}
+
+console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])); */
+
