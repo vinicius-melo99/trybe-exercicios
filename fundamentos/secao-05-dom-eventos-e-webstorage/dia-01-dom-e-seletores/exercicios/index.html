@@ -88,6 +88,15 @@
       }
       modificaMaiusculo('p');
 
+      //Exercício 6
+      function modificaParagrafos(){
+        const elementos = document.querySelectorAll('p')
+
+        for(i = 0; i < elementos.length; i += 1){
+            console.log(elementos[i].innerText);
+        }
+      }
+      modificaParagrafos();
     </script>
   </body>
 </html>
