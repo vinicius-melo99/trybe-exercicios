@@ -61,13 +61,33 @@
       }
       modificaParagrafo('Daqui 2 anos espero estar atuando como desenvolvedor, em uma boa empresa, colocando em prática todos os conhecimentos adquiridos na Trybe e muito mais! ');
     //   -------------------------------------------------
+
       //Exercício 2
       function modificaCorQuadro(elemento, cor){
         document.getElementsByClassName(elemento)[0].style.backgroundColor = cor;
       }
       modificaCorQuadro('main-content','#1EB720');
       //   -------------------------------------------------
-      
+
+      //Exercício 3
+      function modificaCorCenter(elemento, cor){
+        document.querySelector(elemento).style.backgroundColor = cor;
+      }
+      modificaCorCenter('.center-content','white');
+      //   -------------------------------------------------
+
+      //Exercício 4
+      function alteraTitulo(elemento, texto){
+        document.getElementsByTagName(elemento)[0].innerText = texto;
+      }
+      alteraTitulo('h1','Exercício - JavaScript');
+
+      //Exercício 5
+      function modificaMaiusculo(elemento){
+        document.querySelector(elemento).style.textTransform = 'uppercase';
+      }
+      modificaMaiusculo('p');
+
     </script>
   </body>
 </html>
