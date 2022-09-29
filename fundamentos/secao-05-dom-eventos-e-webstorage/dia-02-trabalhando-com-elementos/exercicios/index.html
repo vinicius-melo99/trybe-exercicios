@@ -57,7 +57,73 @@
   </head>
   <body>
     <script>
-      
+        //exercicio 1 - Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body;
+        const body = document.querySelector('body');
+        const tagH1 = document.createElement('h1');
+
+        tagH1.innerText = 'Exercício - JavaScript DOM';
+        body.appendChild(tagH1);
+
+        //exercicio 2 - Adicione a tag main com a classe main-content como filho da tag body
+        const main = document.createElement('main');
+        
+        main.className = 'main-content';
+        body.appendChild(main);
+
+        //exercicio 3 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2
+        // const acessaMain = document.querySelector('main-content');
+        const section = document.createElement('section');
+
+        section.className = 'center-content';
+        main.appendChild(section);
+
+        //exercicio 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto
+        const createP = document.createElement('p');
+        section.appendChild(createP);
+
+        //exercicio 5 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2
+        const sectionLeft = document.createElement('section');
+        sectionLeft.className = 'left-content';
+
+        main.appendChild(sectionLeft);
+
+        //exericio 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2
+        const sectionRight = document.createElement('section');
+        sectionRight.className = 'right-content';
+
+        main.appendChild(sectionRight);
+
+        // exercicio 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+        const image = document.createElement('img');
+        image.src = 'https://picsum.photos/200';
+        image.className = 'small-image';
+
+        sectionLeft.append(image);
+
+        // exercicio 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+        let arrayValores = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        const lista = document.createElement('ul');
+
+        lista.className = 'lista-valores';
+        sectionRight.appendChild(lista);
+
+        for(let valor of arrayValores){
+            let elementoLista = document.createElement('li');
+            elementoLista.innerText = valor;
+
+            lista.appendChild(elementoLista);
+        }
+
+        //exercicio 9 - Adicione 3 tags h3, todas sendo filhas do main criado no passo 2
+        for(let i = 1; i <= 3; i++){
+            let criaH3 = document.createElement('h3');
+            main.appendChild(criaH3);
+        }
+
+        // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+
+
+        
     </script>
   </body>
 </html>
