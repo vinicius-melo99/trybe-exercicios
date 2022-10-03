@@ -21,6 +21,7 @@ const holidayDays = document.getElementsByClassName('holiday');
 const buttonsContainer = document.querySelector(".buttons-container");
 const fridayDays = document.getElementsByClassName('friday');
 const daysContainer = document.querySelector(".days-container"); 
+const myTasks = document.querySelector(".my-tasks");
 
 //variáveis gerais
 const buttonFriday = addButtonFriday();
@@ -118,7 +119,23 @@ days.addEventListener("mouseout", function(){
     alvo.style.fontSize = '20px'; 
 });
 
+//adiciona tarefas dinamicamente
+function addTask(descricao){
+    let tarefa = document.createElement('span');
+    tarefa.innerText = descricao;
+    myTasks.appendChild(tarefa);
+}
+
+//adiciona uma leganda com cor para a tarefa.
+function adicionaLegenda(cor){
+    let legenda = document.createElement('div');
+    legenda.className = 'task';
+    legenda.style.backgroundColor = cor;
+    myTasks.appendChild(legenda);
+}
+
 
 //chamada de funções
 preencheDias();
-
+addTask('Cozinhar');
+adicionaLegenda('green');
