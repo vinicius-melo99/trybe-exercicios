@@ -19,11 +19,14 @@ function createDaysOfTheWeek() {
 const days = document.querySelector(".days-container #days");
 const holidayDays = document.getElementsByClassName('holiday');
 const buttonsContainer = document.querySelector(".buttons-container");
+const fridayDays = document.getElementsByClassName('friday');
 
 //variáveis gerais
 const buttonFriday = addButtonFriday();
 const buttonHoliday = addButtonHoliday('Feriados');
 let holidayClicked = false;
+let fridayClicked = false;
+let arrayFridayDays = [];
 
 //Array com de dezembro
 let decemberDaysList = [29,30];
@@ -43,6 +46,7 @@ function addButtonHoliday(texto){
     return button;
 }
 
+//função para adicionar dinamicamente o botão 'sexta-feira';
 function addButtonFriday(){
     let buttonFriday = document.createElement('button');
 
@@ -67,11 +71,12 @@ function preencheDias(){
 
         if(day === 4 || day === 11 || day === 18 || day === 25){
             diaDoMes.classList.add('friday');
+            arrayFridayDays.push(day);
         }
 
     }
 }
-
+//listener que espera o click do botão "feriados" e destaca os dias de feriado no calendário.
 buttonHoliday.addEventListener("click", function(){
     if(holidayClicked === false){
         for(let holiday of holidayDays){
@@ -85,6 +90,21 @@ buttonHoliday.addEventListener("click", function(){
         }
     }
 }); 
+
+//listener que espera o click do botão "sexta-feira" e altera o texto dos dias de sextas pra "#SEXTOU!", processo inverso ocorre ao clicar novamente.
+buttonFriday.addEventListener("click", function(){
+    if(fridayClicked === false){
+        for(let friday of fridayDays){
+            friday.innerText = '#SEXTOU!';
+        }
+        fridayClicked = true;
+    } else {
+        for(let i = 0; i < fridayDays.length; i += 1){
+            fridayDays[i].innerText = `${arrayFridayDays[i]}`;
+        }
+        fridayClicked = false;
+    }
+})
 
 console.log(holidayDays);
 
