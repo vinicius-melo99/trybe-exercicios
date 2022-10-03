@@ -17,6 +17,7 @@ function createDaysOfTheWeek() {
 
 //chamada de elementos
 const days = document.querySelector(".days-container #days");
+const buttonsContainer = document.querySelector(".buttons-container");
   
 //Array com de dezembro
 let decemberDaysList = [29,30];
@@ -24,7 +25,7 @@ let decemberDaysList = [29,30];
 for(let i = 1; i <= 31; i += 1){
     decemberDaysList.push(i);
 }
-
+//função para preencher dinâmicamente os dias do mês de dezembro;
 function preencheDias(){
     for(let day of decemberDaysList){
         let diaDoMes = document.createElement('li');
@@ -43,5 +44,16 @@ function preencheDias(){
     }
 }
 
+function adicionaBotao(texto){
+    let button = document.createElement('button');
+
+    button.id = 'btn-holiday';
+    button.innerText = texto;
+    buttonsContainer.appendChild(button);
+}
+
+
+
 //chamada de funções
 preencheDias();
+adicionaBotao('Feriados');
