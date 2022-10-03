@@ -19,8 +19,10 @@ function createDaysOfTheWeek() {
 const days = document.querySelector(".days-container #days");
 const holidayDays = document.getElementsByClassName('holiday');
 const buttonsContainer = document.querySelector(".buttons-container");
-const button = adicionaBotao('Feriados');
+
 //variáveis gerais
+const buttonFriday = addButtonFriday();
+const buttonHoliday = addButtonHoliday('Feriados');
 let holidayClicked = false;
 
 //Array com de dezembro
@@ -31,7 +33,7 @@ for(let i = 1; i <= 31; i += 1){
 }
 
 //função para adicionar dinamicamente o botão 'feriados';
-function adicionaBotao(texto){
+function addButtonHoliday(texto){
     let button = document.createElement('button');
 
     button.id = 'btn-holiday';
@@ -39,6 +41,16 @@ function adicionaBotao(texto){
     buttonsContainer.appendChild(button);
 
     return button;
+}
+
+function addButtonFriday(){
+    let buttonFriday = document.createElement('button');
+
+    buttonFriday.id = 'btn-friday';
+    buttonFriday.innerText = 'Sexta-Feira';
+    buttonsContainer.appendChild(buttonFriday);
+
+    return buttonFriday;
 }
 
 //função para preencher dinâmicamente os dias do mês de dezembro;
@@ -60,7 +72,7 @@ function preencheDias(){
     }
 }
 
-button.addEventListener("click", function(){
+buttonHoliday.addEventListener("click", function(){
     if(holidayClicked === false){
         for(let holiday of holidayDays){
             holiday.style.backgroundColor = '#2fc18c';
