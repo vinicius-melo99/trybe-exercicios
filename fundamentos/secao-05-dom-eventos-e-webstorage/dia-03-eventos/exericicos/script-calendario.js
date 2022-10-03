@@ -1,5 +1,5 @@
 function createDaysOfTheWeek() {
-    const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+    const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
     const weekDaysList = document.querySelector('.week-days');
   
     for (let index = 0; index < weekDays.length; index += 1) {
@@ -136,6 +136,21 @@ function adicionaLegenda(cor){
     legenda.style.backgroundColor = cor;
     myTasks.appendChild(legenda);
 }
+
+//adiciona a classe 'selected' à div task, ao clicar na cor
+myTasks.addEventListener("click", function(){
+    let clicked = event.target;
+
+    if(clicked !== myTasks){
+        if(clicked.className.includes('task')){
+            if(!clicked.className.includes('selected')){
+                clicked.classList.add('selected');
+            } else{
+                clicked.classList.remove('selected');
+            }
+        }
+    }
+}); 
 
 
 //chamada de funções
