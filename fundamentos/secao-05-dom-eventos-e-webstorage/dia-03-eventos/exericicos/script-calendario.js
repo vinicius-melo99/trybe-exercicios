@@ -111,12 +111,15 @@ buttonFriday.addEventListener("click", function(){
 //funções para alterar o tamanho do texto ao passar e tirar o mouse de cima do elemento
 days.addEventListener("mouseover", function(){
     let alvo = event.target;
-    alvo.style.fontSize = '28px'; 
+    alvo.style.transition = '0.12s'
+    if(alvo !== days){
+        alvo.style.transform = 'scale(1.5)';
+    }
 });
 
 days.addEventListener("mouseout", function(){
     let alvo = event.target;
-    alvo.style.fontSize = '20px'; 
+    alvo.style.transform = 'scale(1)'; 
 });
 
 //adiciona tarefas dinamicamente
