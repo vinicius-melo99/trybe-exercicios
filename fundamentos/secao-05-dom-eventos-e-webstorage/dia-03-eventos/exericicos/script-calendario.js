@@ -20,6 +20,7 @@ const days = document.querySelector(".days-container #days");
 const holidayDays = document.getElementsByClassName('holiday');
 const buttonsContainer = document.querySelector(".buttons-container");
 const fridayDays = document.getElementsByClassName('friday');
+const daysContainer = document.querySelector(".days-container"); 
 
 //variáveis gerais
 const buttonFriday = addButtonFriday();
@@ -104,9 +105,19 @@ buttonFriday.addEventListener("click", function(){
         }
         fridayClicked = false;
     }
-})
+});
 
-console.log(holidayDays);
+//funções para alterar o tamanho do texto ao passar e tirar o mouse de cima do elemento
+days.addEventListener("mouseover", function(){
+    let alvo = event.target;
+    alvo.style.fontSize = '28px'; 
+});
+
+days.addEventListener("mouseout", function(){
+    let alvo = event.target;
+    alvo.style.fontSize = '20px'; 
+});
+
 
 //chamada de funções
 preencheDias();
