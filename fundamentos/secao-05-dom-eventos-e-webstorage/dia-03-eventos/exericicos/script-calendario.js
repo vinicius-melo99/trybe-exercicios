@@ -29,7 +29,17 @@ function preencheDias(){
     for(let day of decemberDaysList){
         let diaDoMes = document.createElement('li');
         diaDoMes.innerText = `${day}`;
+        diaDoMes.classList = 'day';
         days.appendChild(diaDoMes);
+
+        if(day === 24 || day === 25 || day === 31){
+            diaDoMes.classList.add('holiday');
+        }
+
+        if(day === 4 || day === 11 || day === 18 || day === 25){
+            diaDoMes.classList.add('friday');
+        }
+
     }
 }
 
