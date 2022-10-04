@@ -22,6 +22,9 @@ const buttonsContainer = document.querySelector(".buttons-container");
 const fridayDays = document.getElementsByClassName('friday');
 const daysContainer = document.querySelector(".days-container"); 
 const myTasks = document.querySelector(".my-tasks");
+const taskList = document.querySelector(".task-list");
+const btnAdd = document.getElementById('btn-add');
+const taskInput = document.getElementById('task-input');
 
 //variáveis gerais
 const buttonFriday = addButtonFriday();
@@ -150,10 +153,56 @@ myTasks.addEventListener("click", function(){
             }
         }
     }
-}); 
+});
+
+//função para atribuir a cor da tarefa ao dia do calendário
+days.addEventListener("click", function(){
+    let alvo = event.target;
+    let legendaTarefa = document.querySelector('.selected');
+
+    if(alvo !== days){
+        if(legendaTarefa === null){
+            alert('Selecione uma tarefa!');
+        } else{
+            if(alvo.style.color === legendaTarefa.style.backgroundColor){
+                alvo.style.color = '#777';
+            } else{
+                let corTarefa = legendaTarefa.style.backgroundColor;
+                alvo.style.color = corTarefa;
+            }
+        }
+        
+    }
+});
+
+btnAdd.addEventListener("click", addTaskItem);
+//função para adicionar itens na lista de compromissos, conforme entrada do usuário.
+function addTaskItem(){
+   let taskToAdd = taskInput.value; 
+   if(taskToAdd !== ""){
+        let listItem = document.createElement('li');
+        listItem.innerText = taskToAdd;
+        taskList.appendChild(listItem);
+        taskInput.value = "";
+        taskInput.focus();
+   } else {
+        alert('Digite um compromisso!');
+        taskInput.focus();
+   }
+}
+//chama a função addTaskItem se a tecla 'Enter' for pressionada.
+taskInput.addEventListener("keypress", function(){
+    key = event.key
+
+    if(key === "Enter"){
+        addTaskItem();
+    }
+});
+
 
 
 //chamada de funções
 preencheDias();
 addTask('Cozinhar');
 adicionaLegenda('green');
+
