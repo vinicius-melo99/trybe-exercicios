@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    padding: 20px;
+}
+
+.text{
+    width: 80%;
+    padding-top: 4em;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: arial;
+}
+
+.text p{
+    margin-bottom: 20px;
+}
