@@ -27,7 +27,7 @@
         const value1 = document.getElementById('value1').value;
         const value2 = document.getElementById('value2').value;
         verifyNumbers(value1, value2);
-        const result = Number(value1) + Number(value2);
+        const result = (Number(value1) + Number(value2)).toFixed(2);
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
     } catch(e){
         alert(e.message);
