@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1666218514162" clover="3.2.0">
+  <project timestamp="1666218514162" name="All files">
+    <metrics statements="26" coveredstatements="26" conditionals="20" coveredconditionals="20" methods="9" coveredmethods="9" elements="55" coveredelements="55" complexity="0" loc="26" ncloc="26" packages="1" files="1" classes="1"/>
+    <file name="script.js" path="/home/vinicius/Documents/trybe-exercicios/fundamentos/secao-07-javascriptES6-e-testes/dia-03-primeiros-passos-em-jest/exercicios/script.js">
+      <metrics statements="26" coveredstatements="26" conditionals="20" coveredconditionals="20" methods="9" coveredmethods="9"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="10" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="23" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="25" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="26" type="stmt"/>
+      <line num="34" count="130" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
+      <line num="43" count="2" type="stmt"/>
+      <line num="44" count="28" type="stmt"/>
+      <line num="45" count="140" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="2" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
