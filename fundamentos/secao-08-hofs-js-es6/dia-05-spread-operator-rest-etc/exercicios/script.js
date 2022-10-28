@@ -162,6 +162,5 @@ const yearSeasons = {
   // yearSeasons: estações do ano.
 
   const { spring, summer, autumn, winter } = yearSeasons
-
   const monthsYear = [...winter, ...spring, ...summer, ...autumn];
   console.log(monthsYear.join(", "));
