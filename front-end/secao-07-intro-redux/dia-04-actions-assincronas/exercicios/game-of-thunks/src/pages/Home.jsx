@@ -55,6 +55,7 @@ class Home extends Component{
                     <h2>{ name }</h2>
                     <h3>{ gender }</h3>
                     <p>{ culture }</p>
+                    <p>{ born }</p>
                     <ul>
                         {titles.map( (title) => {
                             return <li>{ title }</li>
