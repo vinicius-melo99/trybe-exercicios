@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email-container {
+  margin-top: 90px;
+  background-color: rgb(231, 231, 231);
+  width: 75%;
+  border-radius: 10px;
+  padding: 20px;
+  -webkit-box-shadow: -1px 0px 32px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 32px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 32px -6px rgba(0,0,0,0.75);
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color:  rgb(177, 177, 177);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 0 10px;
+  cursor: pointer;
+}
