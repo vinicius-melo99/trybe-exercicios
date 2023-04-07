@@ -1,0 +1,11 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "pacote com exercicios da trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vinicius-melo",
+  "license": "ISC"
+}
